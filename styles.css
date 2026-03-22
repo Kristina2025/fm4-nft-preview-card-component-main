@@ -31,7 +31,7 @@ main {
   background-color: var(--color-neutral-blue-900);
   border-radius: 15px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
 }
 
 .card__hero {
@@ -124,7 +124,7 @@ main {
 }
 
 .card__footer {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
