@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary-blue-500: hsl(215, 51%, 70%);
+  --color-primary-cyan-400: hsl(178, 100%, 50%);
+  --color-neutral-blue-950: hsl(217, 54%, 11%);
+  --color-neutral-blue-900: hsl(216, 50%, 16%);
+  --color-neutral-blue-800: hsl(215, 32%, 27%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+}
+
+main {
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-neutral-blue-950);
+  padding: 0.75rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 21.875rem;
+  background-color: var(--color-neutral-blue-900);
+  border-radius: 15px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.card__hero {
+  max-width: 18.875rem;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card__hero::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  background-color: var(--color-primary-cyan-400);
+  display: none;
+}
+
+.card__hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.card__hero:hover::after {
+  display: block;
+}
+
+.card__hero-icon {
+  width: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.card__hero:hover .card__hero-icon {
+  display: block;
+}
+
+.card__title {
+  color: var(--color-neutral-white);
+  margin-top: 1.5rem;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+.card__hero:hover + .card__title {
+  color: var(--color-primary-cyan-400);
+}
+
+.card__text {
+  color: var(--color-primary-blue-500);
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.625rem;
+}
+
+.card__data {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-neutral-blue-800);
+}
+
+.card__data-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card__nft-price {
+  color: var(--color-primary-cyan-400);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card__time {
+  color: var(--color-primary-blue-500);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.card__footer {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__creator-img {
+  width: 100%;
+  max-width: 2.063rem;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.card__creator {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.card__creator-text {
+  color: var(--color-primary-blue-500);
+  margin-right: 0.5rem;
+}
+
+.card__creator-name {
+  color: var(--color-neutral-white);
+}
+
+.card__hero:hover ~ .card__footer .card__creator .card__creator-name {
+  color: var(--color-primary-cyan-400);
+}
