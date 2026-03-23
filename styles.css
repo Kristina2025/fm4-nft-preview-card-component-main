@@ -176,6 +176,6 @@ main {
   color: var(--color-neutral-white);
 }
 
-.card:has(.card__hero:hover) .card__creator-name {
+.card__hero:hover ~ .card__footer .card__creator .card__creator-name {
   color: var(--color-primary-cyan-400);
 }
