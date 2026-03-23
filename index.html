@@ -26,7 +26,7 @@
   <body>
     <main>
       <article class="card">
-        <div class="card__hero">
+        <figure class="card__hero">
           <img
             src="images/image-equilibrium.jpg"
             alt="Glowing translucent cube balancing on one edge on a reflective surface against a dark blue background."
@@ -34,15 +34,26 @@
             width="604"
             class="card__hero-img"
           />
-          <!-- <div class="card__hero-backdrop"></div> -->
-          <img src="images/icon-view.svg" alt="" class="card__hero-icon" />
-        </div>
+          <button
+            type="button"
+            class="card__hero-btn"
+            arial-label="Open image preview"
+            onclick="alert('yay, you are learning new thigns! be happy!')"
+          >
+            <img
+              src="images/icon-view.svg"
+              alt=""
+              class="card__hero-icon"
+              aria-hidden="true"
+            />
+          </button>
+        </figure>
         <h1 class="card__title">Equilibrium #3429</h1>
         <p class="card__text">
           Our Equilibrium collection promotes balance and calm.
         </p>
-        <div class="card__data">
-          <div class="card__data-item">
+        <ul class="card__data">
+          <li class="card__data-item">
             <img
               src="images/icon-ethereum.svg"
               alt=""
@@ -51,8 +62,8 @@
               class="card__etherium-icon"
             />
             <p class="card__nft-price">0.041 ETH</p>
-          </div>
-          <div class="card__data-item">
+          </li>
+          <li class="card__data-item">
             <img
               src="images/icon-clock.svg"
               alt=""
@@ -61,8 +72,8 @@
               class="card__clock-icon"
             />
             <p class="card__time">3 days left</p>
-          </div>
-        </div>
+          </li>
+        </ul>
         <footer class="card__footer">
           <img
             src="images/image-avatar.png"
