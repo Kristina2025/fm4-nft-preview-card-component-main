@@ -108,7 +108,7 @@ main {
   font-weight: 600;
 }
 
-.card:has(.card__hero:hover) .card__title {
+.card__hero:hover ~ .card__title {
   color: var(--color-primary-cyan-400);
 }
 
@@ -159,7 +159,7 @@ main {
   max-width: 2.063rem;
   height: auto;
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: 1px solid var(--color-neutral-white);
 }
 
 .card__creator {
